@@ -55,7 +55,7 @@ app.post('/',(req,res)=>{
         text: body.message,
         attachments: [
             {   // file on disk as an attachment
-                filename: files.file1,
+                filename: files.file1.filename,
                 path: 'doc-test/Doc1.docx' // stream this file
             },
             {   // file on disk as an attachment
