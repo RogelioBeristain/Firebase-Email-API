@@ -54,15 +54,7 @@ app.post('/',(req,res)=>{
         subject: body.subject,
         text: body.message,
         attachments: [
-            {   // file on disk as an attachment
-                filename: files[fileID],
-                path: 'doc-test/Doc1.docx' // stream this file
-            },
-            {   // file on disk as an attachment
-                filename: 'MaterialPremium.pdf',
-                path: 'doc-test/Doc1.pdf' // stream this file
-            },
-            
+            files[fileID],
         ]
     }
 
