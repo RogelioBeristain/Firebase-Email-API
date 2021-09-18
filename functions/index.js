@@ -31,19 +31,19 @@ app.post('/',(req,res)=>{
     const files = {
         'file1': {
             filename:'MateralPro.doc',
-            filePath:'doc-test/Doc1.docx'
+            path:'doc-test/Doc1.docx'
         },
         'file2': {
             filename:'MateralPro.doc',
-            filePath:'doc-test/Doc1.docx'
+            path:'doc-test/Doc1.docx'
         },
         'file3': {
             filename:'MateralPro.doc',
-            filePath:'doc-test/Doc1.docx'
+            path:'doc-test/Doc1.docx'
         },
         'file4': {
             filename:'MateralPro.doc',
-            filePath:'doc-test/Doc1.docx'
+            path:'doc-test/Doc1.docx'
         }
     
     }
