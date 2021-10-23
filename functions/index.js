@@ -30,12 +30,12 @@ admin.initializeApp ()
 } */
 
 let transporter = nodemailer.createTransport({
-    //host: 'smtp.gmail.com ',
-    //port: 465,
-    service: 'gmail',
+    host: "mail.softwareconsentido.com",
+    port: 465,
+    secure: true, // upgrade later with STARTTLS
     auth: {
-        user: "rogelio26.dev@gmail.com",
-        pass: "a1e2i3o4u5R"
+        user: "info@softwareconsentido.com",
+        pass: "a1e2i3o4u5R102088",
     }
 });
 exports.sendMail = functions.https.onRequest((req, res) => {
