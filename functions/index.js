@@ -9,7 +9,7 @@ if(process.env.NODE_ENV != 'production'){
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: true}));
 
 app.post('/',(req,res)=>{
     const {body} = req;
@@ -21,7 +21,8 @@ app.post('/',(req,res)=>{
     }
 
     const transporter = nodemailer.createTransport({
-        
+        host: 'smtp.gmail.com ',
+        port: 465,
         service: 'gmail',
         auth: {
             user: "rogelio26.dev@gmail.com",
