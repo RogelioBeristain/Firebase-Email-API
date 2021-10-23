@@ -9,7 +9,7 @@ if(process.env.NODE_ENV != 'production'){
 
 const app = express();
 
-app.use(cors({origin: '*'}));
+app.use(cors());
 
 app.post('/',(req,res)=>{
     const {body} = req;
