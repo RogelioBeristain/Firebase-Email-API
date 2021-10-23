@@ -8,9 +8,6 @@ if(process.env.NODE_ENV != 'production'){
 }
 
 const app = express();
-
-app.use(cors({origin: true}));
-
 app.post('/',(req,res)=>{
     const {body} = req;
     const isValidMessage = body.message && body.to && body.subject;
@@ -70,20 +67,6 @@ app.post('/',(req,res)=>{
 
 
 })
+app.use(cors());
 
 exports.mailer = functions.https.onRequest(app);
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
